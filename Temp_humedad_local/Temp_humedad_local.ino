@@ -72,6 +72,7 @@ DHT dht(DHTPIN, DHTTYPE);  // Objeto que inicia el sensor
 int statusLedPin = 33; // Para indicar el estatus de conexión
 int flashLedPin = 4; // Para mostrar mensajes recibidos
 long timeNow, timeLast; // Variables de control de tiempo no bloqueante
+int data = 0; // Contador
 int wait = 5000;  // Indica la espera cada 5 segundos para envío de mensajes MQTT
 
 // Inicialización del programa
@@ -189,12 +190,12 @@ void callback(char* topic, byte* message, unsigned int length) {
   // En esta parte puedes agregar las funciones que requieras para actuar segun lo necesites al recibir un mensaje MQTT
 
   // Ejemplo, en caso de recibir el mensaje true - false, se cambiará el estado del led soldado en la placa.
-  // El NodeMCU está suscrito al tema esp/output
-  if (String(topic) == "codigoIoT/ejemplo/mqttin") {  // En caso de recibirse mensaje en el tema esp32/output
+  // El ESP323CAM está suscrito al tema codigoIoT/ejemplo/mqttin
+  if (String(topic) == "codigoIoT/ejemplo/mqttin") {  // En caso de recibirse mensaje en el tema codigoIoT/ejemplo/mqttin
     if(messageTemp == "true"){
       Serial.println("Led encendido");
       digitalWrite(flashLedPin, HIGH);
-    }// fin del if (String(topic) == "esp32/output")
+    }// fin del if (String(topic) == "")
     else if(messageTemp == "false"){
       Serial.println("Led apagado");
       digitalWrite(flashLedPin, LOW);
