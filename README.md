@@ -61,7 +61,69 @@ Para una experimentación satisfactoria es necesario cumplir lo siguiente:
 **Figura 1.** *Circuito electrónico*
 ![](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local/blob/main/imagenes/ESP32%20CAM%20y%20DTH11.png)
 
+2. Realizar el programa de control, tomando como base el programa [ESP32CAM-Wi-Fi-Basic](https://github.com/codigo-iot/ESP32CAM-WiFi-Basic/blob/main/ESP32CAM-WiFi-Basic/ESP32CAM-WiFi-Basic.ino), proporcionado por el profesor. En el programa base se tienen que realizar los siguiente cambios.
+- El tema de publicación y suscripción.
+- Nombre de red y contraseña al que deseas conectarte.
+- Tiempo de espera entre envío de datos en una escala de tiempo de milisegundos.
+
+3. Arrancar NodeRed y cargar el Flow7. Se debe de modificar
+
+- Temas MQTT a reportar.
+- Coordenadas geográficas usadas para hacer la petición API a OpenWeatherMAp.
+- API key. Generar las API Keys para hacer uso del servicio de OpenWeatherMAp.
+- Temperatura umbral para envíar señal de encendido del ledFlash para indicar que se ha rebasado la temperatura de 26°C, propuesta.
+
+4. Polarizar el circuito electrónico y garantizar el rango de covertura de la señal WiFi, no mayor a 3 metros.
+
+## Instrucciones de operación
+
+Ya realizado el Flow7 y hecho **Deploy** en NodeRed, es necesario abrir el dashboard, el cual redirecciona a la página [http://localHost:1880/ui](http://localHost:1880//ui).
+
+## Resultados
+
+En la figura 2, comprueba primeramente el envío de datos usando la terminal de Ubuntu, ya suscrito al tema.
+
+**Figura 2.** *Visualización de datos en la terminal*
+![Datos](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local/blob/main/imagenes/Evidencia%20en%20terminal%20sensores.PNG).
+
+En la figura 3, se muestra una captura del Dashboard, con las gráficas correspondientes de los valores detectados de temperatura, humedad, UVI y calidad de aire; tanto personales y grupales.
+
+**Figura 3**. *DashBoard estación climática.*
+![Dashboard](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local/blob/main/imagenes/Dash%20Estaci%C3%B3n%20meteorol%C3%B3gica%20Flow%207.PNG)
+
+## Evidencias
+
+A continuación se pueden ver enlaces a las evidencias de este proyecto:
+
+- [Repositorio](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local)
+- YouTube
+
+## Preguntas frecuentes
 
 
 
+  **P: ¿Por qué no se conecta el ESP32CAM a mí WiFi?**
 
+  **R:** Verifica que hayas colocado correctamente tu SSID y contraseña.
+  **R:** Verifica que tu red tenga una conexión AES-WPA2.
+  **R:** Asegurate que el microcontrolador se encuentra en el rango de alcance de tu red WiFi, menor a 3 metros.
+
+  **P: ¿Qué significa el error BrownOut?**
+
+  **R:** Significa que tu microcontrolador tiene sobre carga de ruido o le falta potencia de alimentación. Intenta moverlo un poco o conectarlo en un puerto USB diferente.
+  **P: ¿Por qué no puedo ver la información en las gráficas del Dashboard?**
+  
+  **R:** Verifica que hayas escrito los mismos temas en los suscriptores y en los publicadores tanto de flow como del programa del ESP32CAM.
+  **R:** Asegurate de tener una regla que permita conexiones en el puerto 1883 y tener correctamente configurado el archivo mosquitto.conf.
+  **R:** Asegurate de buscar la IP más reciente del broker público, está es dinámica y cambia frecuentemente.
+
+## Compatibilidad
+
+Código directamente compatible con:
+
+- Tarjeta de desarrollo ESP32CAM.
+- Sensor DHT11.
+
+## Créditos
+
+Al profesor Hugo Escalpelo, instructor titular del curso IoT del grupo 7.
