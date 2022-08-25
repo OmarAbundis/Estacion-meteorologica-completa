@@ -96,7 +96,7 @@ En la figura 3, se muestra una captura del Dashboard, con las gráficas correspo
 A continuación se pueden ver enlaces a las evidencias de este proyecto:
 
 - [Repositorio](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local)
-- YouTube
+- [YouTube](https://youtu.be/8Djw6v9P-nc)
 
 ## Preguntas frecuentes
 
