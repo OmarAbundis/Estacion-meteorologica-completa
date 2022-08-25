@@ -57,6 +57,11 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 Para una experimentación satisfactoria es necesario cumplir lo siguiente:
 
 1. Realizar el armado del circuito mostrado en la figura 1.
+   
+**Figura 1.** *Circuito electrónico*
+![](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local/blob/main/imagenes/ESP32%20CAM%20y%20DTH11.png)
 
-![**Figura 1.** *Circuito electrónico*](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local/blob/main/imagenes/ESP32%20CAM%20y%20DTH11.png)
+
+
+
 
