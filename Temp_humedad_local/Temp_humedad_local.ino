@@ -29,7 +29,7 @@
  * 
  *                        Pines del ESP32-CAM       Pines del DHT11    
  *                            
- *                            GPIO 14----------------- DATA
+ *                            GPIO 2----------------- DATA
  *                            5V     ------------------Vcc
  *                            GND    ------------------Gnd
  *                            
@@ -58,7 +58,7 @@ IPAddress server(192,168,1,64);
 //#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 
-#define DHTPIN 14     // Digital pin connected to the DHT sensor
+#define DHTPIN 2     // Digital pin connected to the DHT sensor
 
 
 // Objetos
