@@ -23,3 +23,34 @@ Para garantizar el éxito de la práctica se tuvieron que cumplir con los siguie
 msg.topic = "INSERT INTO clima (nombre,temperatura,humedad) VALUES ('" + msg.payload.id + "'," + msg.payload.temp+ "," + msg.payload.hum + ");";
 return msg;
 
+### Configuración de MySQL en terminal de Ubuntu
+
+1. Instalar mysql server
++ `sudo apt update`
++ `sudo apt install mysql-server`
+
+2. Entrar a mysql con la instrucción:
+   
+   `sudo mysql`
+
+3. Crear una nueva base de datos
+   
+    `CREATE DATABASE codigoIoT;`
+
+4. Seleccionar base de datos 
+   
+    `use DetectorSintomas;`
+
+5. Crear una tabla llamada **clima** que contenga todos los campos necesarios
+    
+    `create table clima (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre CHAR (248) NOT NULL, temperatura FLOAT (4,2), humedad INT (3));`
+
+6. Crear un nuevo usuario de MySQL
+
+    `CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+    GRANT ALL PRIVILEGES ON *.* TO 'OmarAbu'@'localhost';`
+
+
+7. Para salir de los comandos de MySQL, usar el comando
+   
+    `exit;`
