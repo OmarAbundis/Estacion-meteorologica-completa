@@ -91,6 +91,11 @@ En la figura 3, se muestra una captura del Dashboard, con las gráficas correspo
 **Figura 3**. *DashBoard estación climática.*
 ![Dashboard](https://github.com/OmarAbundis/Sensor-de-temperatura-humedad-local/blob/main/imagenes/Dash%20Estaci%C3%B3n%20meteorol%C3%B3gica%20Flow%207.PNG)
 
+En la figura 4, se muestra una captura del Dashboard, con la incorporadción de las gráficas desde Grafana.
+
+**Figura 4**. *DashBoard estación climática con Grafana.
+![Grafana](https://github.com/OmarAbundis/Estacion-meteorologica-completa/blob/main/imagenes/Dash%20Estaci%C3%B3n%20meteorol%C3%B3gica%20Flow%207%20con%20grafana.PNG)
+
 ## Evidencias
 
 A continuación se pueden ver enlaces a las evidencias de este proyecto:
